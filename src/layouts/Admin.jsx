@@ -8,7 +8,7 @@ import Navbar from '../components/admin/Navbar'
 
 import Sidebar from '../components/admin/Sidebar'
 
-export default function admin({children}){
+export default function LayoutAdmin({children}){
     return (
         <>
             <Navbar/>

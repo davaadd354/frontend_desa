@@ -13,7 +13,7 @@ export default function Forbidden(){
                                 className='mt-5 mb-5'
                                 width='200' />
                                 <h2>Access Denied!</h2>
-                                <Link to="/dashboard" className='btn btn-md'>
+                                <Link to="/admin/dashboard" className='btn btn-md'>
                                     <i className="fa fa-long-arrow-alt-left me-2"></i> Back to Dashboard
                                 </Link>
                             </div>
