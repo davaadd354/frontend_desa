@@ -67,9 +67,11 @@ export default function navbar() {
 
   return (
     <nav className="sb-topnav navbar navbar-expand navbar-dark bg-green border-top-yellow shadow-sm fixed-top" style={{paddingLeft: 0,height: '56px',zIndex: '1039' }}>
-      <a className="navbar-brand ps-3 fw-bold" href="index.html">
+      <Link
+      className="navbar-brand ps-3 fw-bold" 
+      to="/admin/dashboard">
         DESA DIGITAL
-      </a>
+      </Link>
       <button
         className="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
         id="sidebarToggle"
