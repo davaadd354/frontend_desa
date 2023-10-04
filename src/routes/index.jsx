@@ -27,6 +27,15 @@ import SlidersIndex from "../views/Admin/Sliders/Index"
 import AparatursIndex from "../views/Admin/Aparaturs/Index"
 import AparatursCreate from "../views/Admin/Aparaturs/Create"
 import AparatursEdit from "../views/Admin/Aparaturs/Edit"
+import Home from "../views/Web/Home"
+import Aparaturs from "../views/Web/Aparaturs/Index"
+import WebPagesIndex from "../views/Web/Pages/Index"
+import WebPagesShow from "../views/Web/Pages/Show"
+import WebPhotosIndex from "../views/Web/Photos/Index"
+import WebPostsIndex from "../views/Web/Posts/Index"
+import WebPostShow from "../views/Web/Posts/Show"
+import WebProductsIndex from "../views/Web/products/Index"
+import WebProductShow from "../views/Web/products/Show"
 
 export default function RouteIndex() {
     return (
@@ -58,6 +67,16 @@ export default function RouteIndex() {
             <Route path="/admin/aparaturs" element={<PrivateRoutes permissions={['aparaturs.index']}><AparatursIndex/></PrivateRoutes>}/>
             <Route path="/admin/aparaturs/create" element={<PrivateRoutes permissions={['aparaturs.create']}><AparatursCreate/></PrivateRoutes>}/>
             <Route path="/admin/aparaturs/edit/:id" element={<PrivateRoutes permissions={['aparaturs.edit']}><AparatursEdit/></PrivateRoutes>}/>
+
+            <Route path="/" element={<Home/>} />
+            <Route path="/aparaturs" element={<Aparaturs/>} />
+            <Route path="/pages" element={<WebPagesIndex/>} />
+            <Route path="/pages/:slug" element={<WebPagesShow/>} />
+            <Route path="/photos" element={<WebPhotosIndex/>} />
+            <Route path="/posts" element={<WebPostsIndex/>} />
+            <Route path="/posts/:slug" element={<WebPostShow/>} />
+            <Route path="/products" element={<WebProductsIndex/>} />
+            <Route path="/products/:slug" element={<WebProductShow/>} />
         </Routes>
     )
 }
